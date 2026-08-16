@@ -18,6 +18,10 @@ This approach brings the philosophy of DHH's Omarchy environment to NixOS—an o
 
 ## Installation
 
+It is highly recommended to **fork this repository** first so you have full control over any custom configuration or updates. Once forked, replace `jjamesmartiin` with your GitHub username in the paths below.
+
+Alternatively, you can pull directly from this repository by using `jjamesmartiin` in the URLs.
+
 You can install this module using either a Flake or a traditional Nix channel setup.
 
 ### Flake Setup
@@ -29,7 +33,8 @@ Add the repository to your `flake.nix` inputs:
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     dockur-windows = {
-      url = "github:yourusername/nixos-dockur-windows";
+      # Replace `jjamesmartiin` with your GitHub username if you forked the repository
+      url = "github:jjamesmartiin/nixos-dockur-windows";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -55,7 +60,8 @@ If you are not using flakes, you can fetch the tarball directly in your `configu
 
 {
   imports = [
-    (import (builtins.fetchTarball "https://github.com/yourusername/nixos-dockur-windows/archive/main.tar.gz"))
+    # Replace `jjamesmartiin` with your GitHub username if you forked the repository
+    (import (builtins.fetchTarball "https://github.com/jjamesmartiin/nixos-dockur-windows/archive/main.tar.gz"))
   ];
 }
 ```
