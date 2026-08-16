@@ -4,7 +4,7 @@ A standalone NixOS module that provides a containerized Windows VM running insid
 
 This approach brings the philosophy of DHH's Omarchy environment to NixOS—an opinionated, seamless developer workflow without the bloat. 
 
-<!-- INSERT_SCREENSHOT: "A screenshot showing a Windows 11 session running seamlessly within FreeRDP on a Linux desktop environment." -->
+![Windows 11 Session on NixOS](assets/demo.png)
 
 ## Features
 
@@ -14,7 +14,7 @@ This approach brings the philosophy of DHH's Omarchy environment to NixOS—an o
 - **Non-Interactive RDP**: Includes `/cert:ignore` in `xfreerdp` invocations. Backgrounded sessions open without terminal passphrase or certificate acceptance prompts.
 - **Shared Host Directory**: Automatically mounts a host folder into the Windows VM.
 
-<!-- INSERT_VIDEO: "A short screen recording demonstrating the `windows-vm launch` command, showing the terminal output and the FreeRDP window appearing." -->
+
 
 ## Installation
 
@@ -111,4 +111,4 @@ Once applied, the module provides a CLI helper script (default name: `windows-vm
 - **`windows-vm restart`**: Restarts the VM container.
 - **`windows-vm web`**: Opens the web-based VNC installation interface in your default browser at `http://127.0.0.1:8006`.
 
-<!-- INSERT_SCREENSHOT: "A screenshot showing the output of `windows-vm status` or `windows-vm --help` in a terminal." -->
+
